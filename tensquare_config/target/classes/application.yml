@@ -1,0 +1,23 @@
+server:
+  port: 12000
+spring:
+  application:
+    name: tensquare-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/fancyWJ/tensquare_dev.git
+          username: fancyWJ
+          password: wj182906
+  rabbitmq:
+    host: 192.168.195.163
+    username: user_wj
+    password: 123
+    virtual-host: /vhost_wj
+management:
+  endpoints:
+    web:
+     exposure:
+       include: bus-refresh
+debug: true

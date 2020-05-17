@@ -1,0 +1,28 @@
+server:
+  port: 9011
+spring:
+  application:
+    name: tensquare-user
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://139.198.19.13:4936/tensquare_user?characterEncoding=utf-8
+    username: admin
+    password: dev123qwe!!
+  jpa:
+    database: mysql
+    show-sql: true
+jwt:
+  config:
+    key: itcast
+    ttl: 360000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka
+    instance:
+      prefer-ip-address: true
